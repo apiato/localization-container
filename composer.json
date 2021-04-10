@@ -1,5 +1,5 @@
 {
-    "name": "mohammad-alavi/apiato-localizaton",
+    "name": "mohammad-alavi/apiato-localization",
     "description": "An Apiato container which adds localization functionality.",
     "type": "apiato-container",
     "license": "MIT",
