@@ -9,7 +9,7 @@
     "extra": {
         "apiato": {
             "container": {
-                "name": "Localizaton"
+                "name": "Localization"
             }
         }
     }
