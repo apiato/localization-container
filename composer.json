@@ -1,0 +1,16 @@
+{
+    "name": "mohammad-alavi/apiato-localizaton",
+    "description": "An Apiato container which adds localization functionality.",
+    "type": "apiato-container",
+    "license": "MIT",
+    "require": {
+        "ext-intl": "*"
+    },
+    "extra": {
+        "apiato": {
+            "container": {
+                "name": "Localizaton"
+            }
+        }
+    }
+}
