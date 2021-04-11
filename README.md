@@ -19,7 +19,7 @@
 ## [Installation](#installation)
 
 ```
-composer require apiato/social-auth-container
+composer require apiato/localization-container
 ```
 
 ## [Support new languages](#support-new-languages)
