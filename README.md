@@ -8,12 +8,19 @@
 | -------------------|---------------|
 | `^0.*.*`           | `^10.*.*`     |
 
+- [Installation](#installation)
 - [Support new languages](#support-new-languages)
 - [Select Request Language](#select-request-language)
 - [Translating Strings](#translating-strings)
 - [Disable Localization](#disable-localization)
 - [Get Available Localizations](#get-available-localizations)
 - [Tests](#tests)
+
+## [Installation](#installation)
+
+```
+composer require apiato/social-auth-container
+```
 
 ## [Support new languages](#support-new-languages)
 
