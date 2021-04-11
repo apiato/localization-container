@@ -1,6 +1,12 @@
 # [Apiato](https://github.com/apiato/apiato) Localization Container
 
-This container works out of the box perfectly but if you want to change its configs or modify the codes, copy the container from `VendorSection` to a section of your project and fix the namespaces
+#### An Apiato container which adds localization functionality.
+
+#### Compatiblity table
+
+| Container Version  | Apiato Version|
+| -------------------|---------------|
+| `^0.*.*`           | `^10.*.*`     |
 
 - [Support new languages](#support-new-languages)
 - [Select Request Language](#select-request-language)
