@@ -5,13 +5,12 @@ namespace App\Containers\VendorSection\Localization\Tasks;
 use App\Containers\VendorSection\Localization\Values\Localization;
 use App\Ship\Parents\Tasks\Task;
 use Illuminate\Support\Collection;
-use Illuminate\Support\Facades\Config;
 
 class GetAllLocalizationsTask extends Task
 {
     public function run(): Collection
     {
-        $supported_localizations = Config::get('localization-container.supported_languages');
+        $supported_localizations = config('vendorSection-localization.supported_languages');
 
         $localizations = new Collection();
 

@@ -3,7 +3,6 @@
 namespace App\Containers\VendorSection\Localization\Values;
 
 use App\Ship\Parents\Values\Value;
-use Illuminate\Support\Facades\Config;
 use Locale;
 
 class Localization extends Value
@@ -26,7 +25,7 @@ class Localization extends Value
 
     public function getDefaultName(): string
     {
-        return Locale::getDisplayLanguage($this->language, Config::get('app.locale'));
+        return Locale::getDisplayLanguage($this->language, config('app.locale'));
     }
 
     public function getLocaleName(): string

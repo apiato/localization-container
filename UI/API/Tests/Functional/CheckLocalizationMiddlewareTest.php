@@ -3,7 +3,6 @@
 namespace App\Containers\VendorSection\Localization\UI\API\Tests\Functional;
 
 use App\Containers\VendorSection\Localization\Tests\ApiTestCase;
-use Illuminate\Support\Facades\Config;
 
 /**
  * Class CheckLocalizationMiddlewareTest.
@@ -24,7 +23,7 @@ class CheckLocalizationMiddlewareTest extends ApiTestCase
     {
         $data = [];
         $requestHeaders = [];
-        $defaultLanguage = Config::get('app.locale');
+        $defaultLanguage = config('app.locale');
 
         $response = $this->makeCall($data, $requestHeaders);
 

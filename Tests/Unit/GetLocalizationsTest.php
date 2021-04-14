@@ -5,8 +5,6 @@ namespace App\Containers\VendorSection\Localization\Tests\Unit;
 use App\Containers\VendorSection\Localization\Tasks\GetAllLocalizationsTask;
 use App\Containers\VendorSection\Localization\Tests\TestCase;
 use App\Containers\VendorSection\Localization\Values\Localization;
-use Illuminate\Support\Facades\App;
-use Illuminate\Support\Facades\Config;
 
 /**
  * Class GetLocalizationsTest.
@@ -18,17 +16,16 @@ class GetLocalizationsTest extends TestCase
 {
     public function testIfAllSupportedLanguagesAreReturned(): void
     {
-        $class = App::make(GetAllLocalizationsTask::class);
-        $localizations = $class->run();
+	    $localizations = app(GetAllLocalizationsTask::class)->run();
 
-        $configuredLocalizations = Config::get('localization-container.supported_languages', []);
+        $configuredLocalizations = config('vendorSection-localization.supported_languages', []);
 
         self::assertEquals(count($configuredLocalizations), $localizations->count());
     }
 
     public function testIfSpecificLocaleIsReturned(): void
     {
-        $localizations = App::make(GetAllLocalizationsTask::class)->run();
+        $localizations = app(GetAllLocalizationsTask::class)->run();
 
         $unsupportedLocale = new Localization('fr');
         self::assertContainsEquals($unsupportedLocale, $localizations);
@@ -36,7 +33,7 @@ class GetLocalizationsTest extends TestCase
 
     public function testIfSpecificLocaleWithRegionsIsReturned(): void
     {
-        $localizations = App::make(GetAllLocalizationsTask::class)->run();
+        $localizations = app(GetAllLocalizationsTask::class)->run();
 
         $unsupportedLocale = new Localization('en', ['en-GB', 'en-US']);
         self::assertContainsEquals($unsupportedLocale, $localizations);
@@ -44,7 +41,7 @@ class GetLocalizationsTest extends TestCase
 
     public function testIfWrongLocaleIsNotReturned(): void
     {
-        $localizations = App::make(GetAllLocalizationsTask::class)->run();
+        $localizations = app(GetAllLocalizationsTask::class)->run();
 
         $unsupportedLocale = new Localization('xxx');
         self::assertNotContainsEquals($unsupportedLocale, $localizations);

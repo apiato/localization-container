@@ -8,7 +8,6 @@ use ArrayIterator;
 use Closure;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\App;
-use Illuminate\Support\Facades\Config;
 use Illuminate\Support\Str;
 
 class LocalizationMiddleware extends Middleware
@@ -82,7 +81,7 @@ class LocalizationMiddleware extends Middleware
     {
         $supported_locales = [];
 
-        $locales = Config::get('localization-container.supported_languages');
+        $locales = config('vendorSection-localization.supported_languages');
 
         foreach ($locales as $key => $value) {
             // it is a "simple" language code (e.g., "en")!
@@ -108,7 +107,7 @@ class LocalizationMiddleware extends Middleware
          * read the accept-language from the request
          * if the header is missing, use the default local language
          */
-        $language = Config::get('app.locale');
+        $language = config('app.locale');
 
         if ($request->hasHeader('Accept-Language')) {
             $language = $request->header('Accept-Language');
