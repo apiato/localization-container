@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Containers\VendorSection\Localization\Actions;
+namespace App\Containers\Vendor\Localization\Actions;
 
-use App\Containers\VendorSection\Localization\Tasks\GetAllLocalizationsTask;
+use App\Containers\Vendor\Localization\Tasks\GetAllLocalizationsTask;
 use App\Ship\Parents\Actions\Action;
 use Illuminate\Support\Collection;
 

@@ -47,7 +47,7 @@ to prevent users from requesting unsupported languages, as follows:
 
 Languages file can be placed in any container, not only the Localization Container.
 
-Example languages files are included in the Localization Container at `app/Containers/VendorSection/Localization/Resources/Languages`.
+Example languages files are included in the Localization Container at `app/Containers/Vendor/Localization/Resources/Languages`.
 
 ## [Select Request Language](#select-request-language)
 

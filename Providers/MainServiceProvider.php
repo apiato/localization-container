@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Containers\VendorSection\Localization\Providers;
+namespace App\Containers\Vendor\Localization\Providers;
 
 use App\Ship\Parents\Providers\MainProvider;
 

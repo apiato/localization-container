@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Containers\VendorSection\Localization\Exceptions;
+namespace App\Containers\Vendor\Localization\Exceptions;
 
 use App\Ship\Parents\Exceptions\Exception;
 use Symfony\Component\HttpFoundation\Response as SymfonyResponse;

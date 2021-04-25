@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Containers\VendorSection\Localization\UI\API\Controllers;
+namespace App\Containers\Vendor\Localization\UI\API\Controllers;
 
-use App\Containers\VendorSection\Localization\Actions\GetAllLocalizationsAction;
-use App\Containers\VendorSection\Localization\UI\API\Requests\GetAllLocalizationsRequest;
-use App\Containers\VendorSection\Localization\UI\API\Transformers\LocalizationTransformer;
+use App\Containers\Vendor\Localization\Actions\GetAllLocalizationsAction;
+use App\Containers\Vendor\Localization\UI\API\Requests\GetAllLocalizationsRequest;
+use App\Containers\Vendor\Localization\UI\API\Transformers\LocalizationTransformer;
 use App\Ship\Parents\Controllers\ApiController;
 
 class Controller extends ApiController

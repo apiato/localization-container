@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Containers\VendorSection\Localization\Tasks;
+namespace App\Containers\Vendor\Localization\Tasks;
 
-use App\Containers\VendorSection\Localization\Values\Localization;
+use App\Containers\Vendor\Localization\Values\Localization;
 use App\Ship\Parents\Tasks\Task;
 use Illuminate\Support\Collection;
 
@@ -10,7 +10,7 @@ class GetAllLocalizationsTask extends Task
 {
     public function run(): Collection
     {
-        $supported_localizations = config('vendorSection-localization.supported_languages');
+        $supported_localizations = config('vendor-localization.supported_languages');
 
         $localizations = new Collection();
 

@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Containers\VendorSection\Localization\UI\API\Transformers;
+namespace App\Containers\Vendor\Localization\UI\API\Transformers;
 
-use App\Containers\VendorSection\Localization\Values\Localization;
+use App\Containers\Vendor\Localization\Values\Localization;
 use App\Ship\Parents\Transformers\Transformer;
 
 class LocalizationTransformer extends Transformer

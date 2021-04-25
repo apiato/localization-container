@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Containers\VendorSection\Localization\Values;
+namespace App\Containers\Vendor\Localization\Values;
 
 use App\Ship\Parents\Values\Value;
 use Locale;

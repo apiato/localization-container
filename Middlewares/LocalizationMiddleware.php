@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Containers\VendorSection\Localization\Middlewares;
+namespace App\Containers\Vendor\Localization\Middlewares;
 
-use App\Containers\VendorSection\Localization\Exceptions\UnsupportedLanguageException;
+use App\Containers\Vendor\Localization\Exceptions\UnsupportedLanguageException;
 use App\Ship\Parents\Middlewares\Middleware;
 use ArrayIterator;
 use Closure;
@@ -81,7 +81,7 @@ class LocalizationMiddleware extends Middleware
     {
         $supported_locales = [];
 
-        $locales = config('vendorSection-localization.supported_languages');
+        $locales = config('vendor-localization.supported_languages');
 
         foreach ($locales as $key => $value) {
             // it is a "simple" language code (e.g., "en")!

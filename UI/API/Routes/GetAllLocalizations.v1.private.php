@@ -53,7 +53,7 @@
 }
  */
 
-use App\Containers\VendorSection\Localization\UI\API\Controllers\Controller;
+use App\Containers\Vendor\Localization\UI\API\Controllers\Controller;
 use Illuminate\Support\Facades\Route;
 
 Route::get('localizations', [Controller::class, 'getAllLocalizations'])

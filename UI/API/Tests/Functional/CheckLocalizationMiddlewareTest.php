@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Containers\VendorSection\Localization\UI\API\Tests\Functional;
+namespace App\Containers\Vendor\Localization\UI\API\Tests\Functional;
 
-use App\Containers\VendorSection\Localization\Tests\ApiTestCase;
+use App\Containers\Vendor\Localization\Tests\ApiTestCase;
 
 /**
  * Class CheckLocalizationMiddlewareTest.

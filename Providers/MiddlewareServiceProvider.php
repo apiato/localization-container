@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Containers\VendorSection\Localization\Providers;
+namespace App\Containers\Vendor\Localization\Providers;
 
-use App\Containers\VendorSection\Localization\Middlewares\LocalizationMiddleware;
+use App\Containers\Vendor\Localization\Middlewares\LocalizationMiddleware;
 use App\Ship\Parents\Providers\MiddlewareProvider;
 
 /**

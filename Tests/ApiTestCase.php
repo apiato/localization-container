@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Containers\VendorSection\Localization\Tests;
+namespace App\Containers\Vendor\Localization\Tests;
 
-use App\Containers\VendorSection\Localization\Tests\TestCase as BaseTestCase;
+use App\Containers\Vendor\Localization\Tests\TestCase as BaseTestCase;
 
 /**
  * Class ApiTestCase.

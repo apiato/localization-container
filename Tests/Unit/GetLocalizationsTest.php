@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Containers\VendorSection\Localization\Tests\Unit;
+namespace App\Containers\Vendor\Localization\Tests\Unit;
 
-use App\Containers\VendorSection\Localization\Tasks\GetAllLocalizationsTask;
-use App\Containers\VendorSection\Localization\Tests\TestCase;
-use App\Containers\VendorSection\Localization\Values\Localization;
+use App\Containers\Vendor\Localization\Tasks\GetAllLocalizationsTask;
+use App\Containers\Vendor\Localization\Tests\TestCase;
+use App\Containers\Vendor\Localization\Values\Localization;
 
 /**
  * Class GetLocalizationsTest.
@@ -18,7 +18,7 @@ class GetLocalizationsTest extends TestCase
     {
 	    $localizations = app(GetAllLocalizationsTask::class)->run();
 
-        $configuredLocalizations = config('vendorSection-localization.supported_languages', []);
+        $configuredLocalizations = config('vendor-localization.supported_languages', []);
 
         self::assertEquals(count($configuredLocalizations), $localizations->count());
     }

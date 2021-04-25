@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Containers\VendorSection\Localization\Tests;
+namespace App\Containers\Vendor\Localization\Tests;
 
 use App\Ship\Parents\Tests\PhpUnit\TestCase as ShipTestCase;
 
