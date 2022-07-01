@@ -3,14 +3,9 @@
 namespace App\Containers\Vendor\Localization\Providers;
 
 use App\Containers\Vendor\Localization\Middlewares\LocalizationMiddleware;
-use App\Ship\Parents\Providers\MiddlewareProvider;
+use App\Ship\Parents\Providers\MiddlewareServiceProvider as ParentMiddlewareServiceProvider;
 
-/**
- * Class MiddlewareServiceProvider
- *
- * @author  Mahmoud Zalt  <mahmoud@zalt.me>
- */
-class MiddlewareServiceProvider extends MiddlewareProvider
+class MiddlewareServiceProvider extends ParentMiddlewareServiceProvider
 {
     /**
      * Register Middlewares
