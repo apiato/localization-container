@@ -7,11 +7,11 @@ use App\Ship\Parents\Transformers\Transformer;
 
 class LocalizationTransformer extends Transformer
 {
-    protected $defaultIncludes = [
+    protected array $defaultIncludes = [
 
     ];
 
-    protected $availableIncludes = [
+    protected array $availableIncludes = [
 
     ];
 
