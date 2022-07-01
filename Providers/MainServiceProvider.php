@@ -19,6 +19,7 @@ class MainServiceProvider extends ParentMainServiceProvider
     ];
 
     public function __construct(
+        $app,
         /**
          * Container Service Providers.
          */
@@ -28,5 +29,6 @@ class MainServiceProvider extends ParentMainServiceProvider
         if (config('vendor-localization.localization_enabled')) {
             array_push($serviceProviders, MiddlewareServiceProvider::class);
         }
+        parent::__construct($app);
     }
 }
