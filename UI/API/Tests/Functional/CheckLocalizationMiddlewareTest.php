@@ -27,8 +27,13 @@ class CheckLocalizationMiddlewareTest extends ApiTestCase
 
         $response = $this->makeCall($data, $requestHeaders);
 
-        $response->assertStatus(200)
-            ->assertHeader('content-language', $defaultLanguage);
+        if (config('vendor-localization.localization_enabled')) {
+            $response->assertStatus(200)
+                ->assertHeader('content-language', $defaultLanguage);
+        } else {
+            $response->assertStatus(200)
+                ->assertHeaderMissing('content-language', $defaultLanguage);
+        }
     }
 
     public function testIfMiddlewareSetsCustomLanguage(): void
@@ -41,8 +46,13 @@ class CheckLocalizationMiddlewareTest extends ApiTestCase
 
         $response = $this->makeCall($data, $requestHeaders);
 
-        $response->assertStatus(200)
-            ->assertHeader('content-language', $language);
+        if (config('vendor-localization.localization_enabled')) {
+            $response->assertStatus(200)
+                ->assertHeader('content-language', $language);
+        } else {
+            $response->assertStatus(200)
+                ->assertHeaderMissing('content-language', $language);
+        }
     }
 
     public function testIfMiddlewareThrowsErrorOnWrongLanguage(): void
@@ -55,6 +65,10 @@ class CheckLocalizationMiddlewareTest extends ApiTestCase
 
         $response = $this->makeCall($data, $requestHeaders);
 
-        $response->assertStatus(412);
+        if (config('vendor-localization.localization_enabled')) {
+            $response->assertStatus(412);
+        } else {
+            $response->assertStatus(200);
+        }
     }
 }

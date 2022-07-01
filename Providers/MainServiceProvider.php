@@ -12,23 +12,17 @@ use App\Ship\Parents\Providers\MainServiceProvider as ParentMainServiceProvider;
 class MainServiceProvider extends ParentMainServiceProvider
 {
     /**
+     * Container Service Providers.
+     */
+    public array $serviceProviders = [
+        LocalizationServiceProvider::class,
+        MiddlewareServiceProvider::class,
+    ];
+
+    /**
      * Container Aliases
      */
     public array $aliases = [
 
     ];
-
-    public function __construct(
-        $app,
-        /**
-         * Container Service Providers.
-         */
-        public array $serviceProviders = [
-            LocalizationServiceProvider::class,
-        ]) {
-        if (config('vendor-localization.localization_enabled')) {
-            array_push($serviceProviders, MiddlewareServiceProvider::class);
-        }
-        parent::__construct($app);
-    }
 }

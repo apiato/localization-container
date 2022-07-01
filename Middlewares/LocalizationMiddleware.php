@@ -14,6 +14,10 @@ class LocalizationMiddleware extends Middleware
 {
     public function handle(Request $request, Closure $next)
     {
+        if (!config('vendor-localization.localization_enabled')) {
+            return $next($request);
+        }
+
         // find and validate the lang on that request
         $lang = $this->validateLanguage($this->findLanguage($request));
 
