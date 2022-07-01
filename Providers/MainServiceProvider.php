@@ -22,11 +22,11 @@ class MainServiceProvider extends ParentMainServiceProvider
         /**
          * Container Service Providers.
          */
-        public array &$serviceProviders = [
+        public array $serviceProviders = [
             LocalizationServiceProvider::class,
         ]) {
         if (config('vendor-localization.localization_enabled')) {
-            $serviceProviders[] = MiddlewareServiceProvider::class;
+            array_push($serviceProviders, MiddlewareServiceProvider::class);
         }
     }
 }
