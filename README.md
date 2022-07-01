@@ -2,4 +2,4 @@
 
 #### An Apiato container which adds localization functionality.
 
-Read more about it in Apiato [docs](http://apiato.io/docs/additional-features/apiato-containers/localization).
+Read more about it in Apiato [docs](http://apiato.io/docs/additional-features/localization).

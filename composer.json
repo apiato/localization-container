@@ -12,5 +12,10 @@
                 "name": "Localization"
             }
         }
+    },
+    "config": {
+        "allow-plugins": {
+            "apiato/container-installer": true
+        }
     }
 }

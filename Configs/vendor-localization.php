@@ -27,4 +27,14 @@ return [
         'fa'
     ],
 
+    /*
+    |--------------------------------------------------------------------------
+    | Enable/Disable Localization
+    |--------------------------------------------------------------------------
+    |
+    | Disable or Enable the localization
+    |
+    */
+
+    'localization_enabled' => env('LOCALIZATION_ENABLED', true),
 ];
